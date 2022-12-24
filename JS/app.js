@@ -1,24 +1,44 @@
 
-/*
-Васи положил 12 000$ на вклад 7% годовых с капитализацией 1 раз в месяц. Вывести в консоль, сможет ли он купить дом за 13 500$ через 2 года после снятия вклада. И остаток после покупки.
-Итог = Сумма * (1 + Ставка в месяц не в %) ^ срок в месяцах
 
-*/
-//Условие
-let many = 12000;
-const depo = 0.07,
-	depoTime = 24,
-	homeValue = 13500;
+const role = 'medik';
 
-// код
-many = many * (1 + depo / 12) ** depoTime;
-if (many > homeValue) {
-	console.log(`Всего накопил ${many} рублей.
-Денег достаточно можно купить дом!
-Ещё останется ${many - homeValue} рублей`);
+if (role === 'maneg') { 
+	console.log('yyyy');
+} else if (role === 'seo') {
+	console.log('seoseo');
+} else if(role === 'medik') {
+	console.log('medikmedik');
 } else {
-	console.log(`Всего накопил ${many} рублей.
-Денег недостаточно!;`);
+	console.log('nonono');
 }
 
-console.log(many);
+const role1 = 'maneg';
+/*
+switch (role1) { 
+	case 'maneg1':
+		console.log('1yyyy');
+		break;
+	case 'seo1':
+		console.log('1seoseo');
+		break;
+	case 'medik1':
+		console.log('1medikmedik');
+		break;
+	default:
+		console.log('nonono');
+}
+*/
+
+const role2 = 'medik';
+
+switch (role2) { 
+	case 'maneg1':
+	case 'seo1':
+		console.log('yyyyyyyyyyyyyy');
+		break;
+	case 'medik1':
+		console.log('1medikmedik');
+		break;
+	default:
+		console.log('nonono');
+}

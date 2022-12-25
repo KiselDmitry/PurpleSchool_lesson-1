@@ -42,3 +42,50 @@ switch (role2) {
 	default:
 		console.log('nonono');
 }
+
+
+// Задача. В переменной min лежит число от 0 до 59. Определите в какую четверть часа попадает это число (в первую, вторую, третью или четвертую).
+
+// Решение:
+const min = 59;
+
+if (min < 15 && min >= 0) {
+	console.log('в первую');
+} else if (min >=15 && min <30) {
+	console.log('вторую');
+} else if (min >= 30 && min < 45) {
+	console.log('третью');
+} else if (min >= 45 && min < 60) {
+	console.log('четвертую');
+} else {
+
+}
+
+// Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет значение 'ru', то в переменную arr запишем массив дней недели на русском языке, а если имеет значение 'en' – то на английском. Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch.
+
+let lang = 'en';
+let arr;
+if (lang ==='ru') {
+	arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];	
+} else if (lang ==='en') {
+	arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+}
+
+console.log(arr);
+
+let lang2 = 'ru';
+let arr2;
+switch (lang2) {
+	case 'en':
+		arr2 = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+		break;
+	case 'ru':
+		arr2 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+		break;
+
+	default:
+		break;
+}
+console.log(arr2);
+
+

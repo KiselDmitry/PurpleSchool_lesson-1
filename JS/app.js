@@ -64,7 +64,8 @@ if (min < 15 && min >= 0) {
 // Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет значение 'ru', то в переменную arr запишем массив дней недели на русском языке, а если имеет значение 'en' – то на английском. Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch.
 
 let lang = 'en';
-let arr, arrErorr = 'Erorr';
+let arr,
+	arrErorr = 'Erorr';
 const arrEn  = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
 	arrRu  = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 let rezTest = lang === 'ru' || lang === 'en';
@@ -74,5 +75,19 @@ lang === 'ru' ?  arr = arrRu : arr = arrEn;
 console.log(rezTest === true ? arr : arrErorr);
 
 
+// Пользователь хочет приобрести игру в магазине. Он может это сделать только если:
+// Eго баланс больше 1000 (balance) или число бонусов больше 100 (bonusBalance)
+// Он не забанен (isBanned)
+// Игра не куплена (isExist)
+// Игра в продаже (isSelling)
+// Напишите условие для покупки и выведите в консоль результат.
 
 
+let balance = 1001,
+	bonusBalance = 10,
+	isBanned = true,
+	isExist = false,
+	isSelling = true;
+
+let canBuy = (balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSelling;
+console.log(`Пользователь приоб ретёт игру? ${canBuy ? 'Да' : 'Нет'}`);

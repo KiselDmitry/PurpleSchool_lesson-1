@@ -63,15 +63,15 @@ if (min < 15 && min >= 0) {
 
 // Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет значение 'ru', то в переменную arr запишем массив дней недели на русском языке, а если имеет значение 'en' – то на английском. Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch.
 
-let lang = 'ru';
-let arr;
-let arrEn  = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
-let arrRu  = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+let lang = 'en';
+let arr, arrErorr = 'Erorr';
+const arrEn  = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+	arrRu  = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+let rezTest = lang === 'ru' || lang === 'en';
 
-
-
-
-console.log(lang === 'ru' ?  arr = arrRu : arr = arrEn);
+console.log(rezTest);
+lang === 'ru' ?  arr = arrRu : arr = arrEn;
+console.log(rezTest === true ? arr : arrErorr);
 
 
 

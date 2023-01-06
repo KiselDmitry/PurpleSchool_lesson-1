@@ -1,12 +1,14 @@
-const roles = ['admin', 'user', 'menager', 'superuser'];
+const num = 987654321;
+const str = String(num);
+console.log(str);
 
-//Метод reverse()  изменяет исходный массив в обратную сторону
-console.log(roles);
-roles.reverse();
-console.log(roles);
-
-const newRoles = ['sisadmin', 'developer'];
-
-//Метод concat()  конкатинирует
-const res = roles.concat(newRoles);
+//split('') метод строк (строка в массив)
+const res = str.split('');
 console.log(res);
+
+const rev = res.reverse();
+console.log(rev);
+
+//split('') метод массивов (массив в строку)
+const resRev = rev.join('');
+console.log(Number(resRev));

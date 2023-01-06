@@ -1,14 +1,75 @@
-const num = 987654321;
-const str = String(num);
-console.log(str);
+/*
+Дан список задач
+const tasks = ['Задача 1'];
 
-//split('') метод строк (строка в массив)
-const res = str.split('');
-console.log(res);
+Сделать функции:
+Добавление задачи в конец
+Удаление задачи по названию
+Перенос задачи в начало списка по названию
+! Всегда меняем исходный массив
+push()
+includes('el')
+indexof()
+splice(2, 2)
+splice()
+unshift()
+*/
 
-const rev = res.reverse();
-console.log(rev);
+const tasks = ['Задача 1'];
 
-//split('') метод массивов (массив в строку)
-const resRev = rev.join('');
-console.log(Number(resRev));
+//Добавление задачи в конец
+function addEnd(task) {
+	tasks.push(task);
+}
+addEnd('Задача2');
+addEnd('Задача3');
+addEnd('Задача4');
+console.log(tasks);
+//==========================
+
+//Удаление задачи по названию=====
+function deletTask(task) {
+	 
+	
+	const el = tasks.indexOf(task);
+	if (el === -1) {
+		return;
+	} 
+	const taskStart = tasks.splice(el, 1);
+	
+}
+
+const start = deletTask('Задача2');
+console.log(tasks);
+//==========================
+
+//Перенос задачи в начало списка по названию===
+function addBeginningList(task) {
+	const el = tasks.indexOf(task);
+	if (el === -1) {
+		return;
+	} 
+	//одно решение
+	const taskStart = tasks.splice(el, 1)[0];
+	tasks.unshift(taskStart);
+	//другое решение
+	// const oldTask = tasks[el];
+	// tasks.splice(el, 1)
+	// tasks.unshift(oldTask);
+} 
+addBeginningList('Задача4');
+console.log(tasks);
+console.log(tasks.includes('Задача6'));
+//==========================
+
+
+
+
+
+
+
+
+
+
+
+

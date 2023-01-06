@@ -1,23 +1,29 @@
-const role1 = 'admin';
-const role2 = 'user';
-const role3 = 'superuser';
+const users = ['Vasy', 'Petya', 'Katya'];
+console.log(users);
+users[2] = 'Anya'; //замена элементов массива
+console.log(users);
 
-const roles = ['admin', 'user', 'superuser'];
+// добавление элемента массива
+users[3] = 'Nikita'; 
+console.log(users);
+users[users.length] = 'Abraham'; 
+console.log(users);
+// Метод push добавляет элемент в  конец массива при этом возвращает длинну массива
+const arrLenght = users.push('Dik');
+console.log(users);
+console.log(arrLenght);
 
-const userInfo = ['Any', 25];
-console.log(roles);
-console.log(userInfo);
-console.log(roles[0]);
-console.log(roles.at(0)); // первый элемент
-console.log(roles.at(-1)); // последний элемент
+// Метод unshift добавляет элемент в  начало массива
+users.unshift('Iren');
+console.log(users);
 
-console.log(roles.length);
-console.log(roles[roles.length - 1]); // последний элемент
+// Метод pop() удаляет последний элемент при этом возвращает удаленный элемент
+const el = users.pop();
+console.log(users);
+console.log(el);
 
-const userAge = [2020 - 2002, 10 > 0 ? 20 : 10]; // элементы могут расчмтываться и применятся тернарные операторы
-console.log(userAge);
-//другой синтаксис объявления (используется реже)
-const userName = new Array('Vasy', 'Petya', 'Katya');
-console.log(userName);
+// Метод shift() удаляет первый элемент при этом возвращает удаленный элемент
+const el2 = users.shift();
+console.log(users);
+console.log(el2);
 
-//для выполнения операций *+/- с элементами массива необходимо прменять спуциальные методы массивов

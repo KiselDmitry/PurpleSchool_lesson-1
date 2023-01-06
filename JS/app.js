@@ -1,45 +1,23 @@
+const role1 = 'admin';
+const role2 = 'user';
+const role3 = 'superuser';
 
-const log = console.log;
 const roles = ['admin', 'user', 'superuser'];
-let l;
-roles[roles.length] = 'superadmin';
 
+const userInfo = ['Any', 25];
+console.log(roles);
+console.log(userInfo);
+console.log(roles[0]);
+console.log(roles.at(0)); // первый элемент
+console.log(roles.at(-1)); // последний элемент
 
-log(roles.length);
-console.log(roles.at(1));
-log(roles);
+console.log(roles.length);
+console.log(roles[roles.length - 1]); // последний элемент
 
-const arrLenght = roles.push('admin2');
-log(roles);
-log(arrLenght);
+const userAge = [2020 - 2002, 10 > 0 ? 20 : 10]; // элементы могут расчмтываться и применятся тернарные операторы
+console.log(userAge);
+//другой синтаксис объявления (используется реже)
+const userName = new Array('Vasy', 'Petya', 'Katya');
+console.log(userName);
 
-const num = 987654321;
-const str = String(num);
-log(str);
-
-
-const res = str.split('');
-log(res);
-
-const rev = res.reverse();
-log(rev);
-
-const resRev = rev.join('');
-log(Number(resRev));
-
-/*
-Дан список задач
-const tasks = ['Задача 1'];
-
-Сделать функции:
-Добавление задачи в конец
-Удаление задачи по названию
-Перенос задачи в начало списка по названию
-! Всегда меняем исходный массив
-push()
-indexof()
-splice()
-unshift()
-*/
-
-const tasks = ['Задача 1'];
+//для выполнения операций *+/- с элементами массива необходимо прменять спуциальные методы массивов

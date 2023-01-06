@@ -1,69 +1,45 @@
-// ФУНКЦИИ
 
-function numRes(num1, num2) {
-	const res = num1 * num2
-	console.log(`${num1} ${num2} получится ${res}`);
-	return res;
-}
-console.log(numRes(3, 4));
-
-numRes(5, 6);
-
-//Анонимная
-
-let anonimnayFun = function (num1, num2) {
-	const res = num1 * num2
-	console.log(`${num1} *${num2} получится ${res}`);
-	return res;
-};
-
-console.log(anonimnayFun(17,23));
-anonimnayFun(40, 5);
-
-// Стрелочные
-
-let strelochnayFun = (num1, num2) => num1 * num2;
-
-let a1 = 60,
-	a2 = anonimnayFun(3,3);
+const log = console.log;
+const roles = ['admin', 'user', 'superuser'];
+let l;
+roles[roles.length] = 'superadmin';
 
 
-console.log(`${a1} умножить ${a2} получится ${strelochnayFun(a1, a2)}`);
+log(roles.length);
+console.log(roles.at(1));
+log(roles);
 
-/*	
-Задание для упражнения:
-Пользователь:
-Возраст
-Availability of work
-Деньги
-Нужно проверить может ли он купить новый MacBook за 2000$? Он может брать не только свои деньги, но и взять кредит. Ему дадут 500$, только если ему больше 24-х лет и он имеет работу, 100$ если ему просто больше 24-х лет и 0 в ином случае. Напишите функцию, которая принимает данные пользователя и товара и возвращает true или false.
+const arrLenght = roles.push('admin2');
+log(roles);
+log(arrLenght);
+
+const num = 987654321;
+const str = String(num);
+log(str);
+
+
+const res = str.split('');
+log(res);
+
+const rev = res.reverse();
+log(rev);
+
+const resRev = rev.join('');
+log(Number(resRev));
+
+/*
+Дан список задач
+const tasks = ['Задача 1'];
+
+Сделать функции:
+Добавление задачи в конец
+Удаление задачи по названию
+Перенос задачи в начало списка по названию
+! Всегда меняем исходный массив
+push()
+indexof()
+splice()
+unshift()
 */
-// const costOfGoods = 2000;
-// const userAge = 25;
-// const userWork = false;
-// const userMoney = 1000;
 
-
-
-function rez (costOfGoods, userAge, userMoney, userWork = false) {
-	if (userWork && userAge > 24) {
-		userMoneyCredit = 500;
-	} else if (userAge > 24) {
-		userMoneyCredit = 100;
-	} else {
-		userMoneyCredit = 0;
-	}
-	let balans = userMoneyCredit + userMoney;
-	
-	let answer;
-	if (balans >= costOfGoods) {
-		answer = true;
-	} else {
-		answer = false;
-	}
-	return answer;
-}
-
-
-console.log(rez(2000, 25, 1600, ) ? 'может купить':'не может купить');
-
+const tasks = ['Задача 1'];

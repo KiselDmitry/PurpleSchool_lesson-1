@@ -1,17 +1,22 @@
-// Дан произвольный url вида - https://purpleschool.ru/course/javascript
-// Нужно сделать функцию, которая выводит в консоль:
-// Протокол (https)
-// Доменное имя (purpleschool.ru)
-// Путь внутри сайта (/course/javascript)
+/*
+Задача вывести в консоль строку "Я люблю  JS !" из массива
+const arr = ['!', ' JS', 'люблю', 'Я'];
+*/
+// Вариант 1
+const arr = ['!', ' JS', 'люблю', 'Я'];
+const arrRes = [];
+for (let i = arr.length - 1; i >= 0; i--) {
+	arrRes.push(arr[i]);
 
-const url = 'https://purpleschool.ru/course/javascript';
-
-function dispCons(url) {
-	const [protocol, _, host, ...paht]= url.split('/');
-	console.log(protocol, _, host, paht);
-	console.log(`Протокол: ${protocol.split(':')[0]}`);
-	console.log(`Доменное имя: ${host}`);
-	console.log(`Путь внутри сайта: /${paht.join('/')}`);
-	
 }
-dispCons(url);
+const res = arrRes.join(" ")
+console.log(res);
+
+// Вариант 2
+const arr2 = ['!', ' JS', 'люблю', 'Я'];
+const arrRes2 = [];
+for (let i = 0; i < arr.length; i++) {
+	arrRes2.unshift(arr[i]);
+}
+const res2 = arrRes2.join(" ")
+console.log(res2);

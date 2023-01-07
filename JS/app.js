@@ -1,36 +1,17 @@
-const userDate = ['Anton', 18, 'Mascow'];
+// Дан произвольный url вида - https://purpleschool.ru/course/javascript
+// Нужно сделать функцию, которая выводит в консоль:
+// Протокол (https)
+// Доменное имя (purpleschool.ru)
+// Путь внутри сайта (/course/javascript)
 
-function getDate() {
-	return ['Anton', 18, 'Mascow'];
+const url = 'https://purpleschool.ru/course/javascript';
+
+function dispCons(url) {
+	const [protocol, _, host, ...paht]= url.split('/');
+	console.log(protocol, _, host, paht);
+	console.log(`Протокол: ${protocol.split(':')[0]}`);
+	console.log(`Доменное имя: ${host}`);
+	console.log(`Путь внутри сайта: /${paht.join('/')}`);
+	
 }
-
-const userName = getDate()[0];
-const age = getDate()[1];
-const city = getDate()[2];
-
-console.log(userName, age, city); //Anton 18 Mascow
-
-console.log(userDate); //['Anton', 18, 'Mascow']
-
-console.log(getDate()); //['Anton', 18, 'Mascow']
-
-//Деструктуризация=================
-
-//const userDate2 = ['Ivan', 22, 'Anapa'];
-function getDate2() {
-	return ['Ivan', 22, 'Anapa'];
-}
-
-const [userImy, userAge, userCity] = getDate2();
-//const [userImy, userAge, userCity] = userDate2;
-
-console.log(userImy, userAge, userCity); //Ivan 22 Anapa
-//console.log(userDate2); //['Ivan', 22, 'Anapa']
-
-//Rest оператор
-
-const data = [1, 2, 3, 4, 5, 6, 7];
-
-const [one, two, three, four, ...others] = data;
-
-console.log(one, two, three, others); //1 2 3   [5, 6, 7]
+dispCons(url);

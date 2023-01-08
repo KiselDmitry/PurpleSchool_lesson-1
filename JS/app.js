@@ -1,61 +1,50 @@
-/*
-Задача вывести в консоль строку "Я люблю  JS !" из массива
-const arr = ['!', ' JS', 'люблю', 'Я'];
-*/
-// Вариант 1
-const arr = ['!', ' JS', 'люблю', 'Я'];
-const arrRes = [];
-for (let i = arr.length - 1; i >= 0; i--) {
-	arrRes.push(arr[i]);
 
+const operations = [1000, -700, 300, -500, 10000];
+const startingBalans = 100;
+
+//======
+function average(arr, initailBalans) {
+	let sum = initailBalans;
+	for (const iterator of arr) {
+		sum += iterator;
+	}	
+	return sum;
 }
-const res = arrRes.join(" ");
-console.log(res);
+console.log(average(operations, startingBalans));
 
-// Вариант 2
-const arr2 = ['!', ' JS', 'люблю', 'Я'];
-const arrRes2 = [];
-for (let i = 0; i < arr.length; i++) {
-	arrRes2.unshift(arr[i]);
+//======
+function balanceCheck(arr, initailBalans) {
+	let sum = initailBalans;
+	let isOk = true;
+	for (const iterator of arr) {
+		sum += iterator;
+		if (sum < 0) {
+			isOk = false;
+			break;
+		}
+		
+	}
+	return isOk;
+} 
+console.log(balanceCheck(operations, startingBalans));
+
+//======
+
+function checkPositivNgativ(arr) {
+	let positiveCount = 0;
+	let positiveSum = 0;
+	let negativeCount = 0;
+	let negativeSum = 0;
+	for (const iterator of arr) {
+		if (iterator > 0) {
+			positiveCount++;
+			positiveSum += iterator;
+		}
+		if(iterator < 0) {
+			negativeCount++;
+			negativeSum += iterator;
+		}
+	}
+	return [positiveSum / positiveCount, negativeSum / negativeCount];
 }
-const res2 = arrRes2.join(" ")
-console.log(res2);
-
-// Вариант 3 цикл wile
-
-const arr3 = ['!', ' JS', 'люблю', 'Я'];
-const arrRes3 = [];
-let i = arr3.length - 1;
-
-while (i>=0) {
-	arrRes3.push(arr3[i]);
-	i--;
-}
-console.log(arrRes3.join(" "));
-
-// ====цикл do wile ======
-let j = 0;
-do {
-	console.log(j);
-	j++;
-} while (j < 0);
-
-// ====цикл for of перебор по элементам======
-
-const array1 = [1, -3, 5, 7, -9, -11];
-let resEl = 0;
-for (let element of array1) {
-	console.log(element);
-	resEl = resEl + element
-}
-console.log('===');
-console.log(resEl);
-console.log('===');
-
-// ====цикл for in перебор по индексу======
-
-const array2 = ['ф', 'ы', 'в', 'а', 'п', 'р'];
-for (let index in array2) {
-	console.log(index); // выводит индекс
-	console.log(array2[index]); //выводит элемент
-}
+console.log(checkPositivNgativ(operations));

@@ -1,23 +1,23 @@
 // ПОПЫТКА 2 (ДВА)
-//Упражнение - Расчёт проекта
+// Основы Преобразование типов
 
-/*
-Ваша часовая ставка 80$ и вы готовы работать не более 5 часов в день 5 дней в неделю (кроме выходных).
-К вам приходит заказчик и предлагает заказ на 40 часов работы. Сейчас понедельник. Вы должны уехать через 11 дней.
-Выведете в консоль:
-Boolean переменную успеете ли вы взяться за работу
-Сколько вы за неё попросите?
-*/
+const age = '45';
+const name = 'Dmutry';
+let pension = true;
 
-// Данные
+console.log(age + 6); //456
+console.log(String(45) + 6); //456
+console.log(Number(age) + 6); //51
+console.log(age - 6); //39 любые действия кроме "+" из строки делает число
+const result = age - 1;
+console.log(result); // 44
+console.log(typeof (result)); // number
 
-const payRateUSD = 80; // часовая ставка
-const projectHours = 40; // дней на реализацию проекта
-const availableHours = (11 - 2) * 5; // - осталось часов
-
-//Результат
-
-console.log('Смогу ли я взятся ? ' +  (availableHours > projectHours));
-console.log('Стоимость работ: ' + projectHours * payRateUSD);
-
-
+console.log(typeof(pension)); // boolean
+console.log(Boolean('')); //false
+console.log(Boolean(0)); //false
+console.log(Boolean(1)); //true
+console.log(Boolean(-1)); //true
+console.log(Boolean('asd')); //true
+console.log(true + 3); //4
+console.log(false + 3); //3

@@ -1,34 +1,23 @@
-// Изменение комита 2
+// ПОПЫТКА 2 (ДВА)
+//Упражнение - Расчёт проекта
 
-const transactionInUSD = [10, -7, 50, -10, 100];
-console.log(transactionInUSD);
-// Вариант for of
-console.log('Вариант for of');
-const transactionInRUB = [];
-for (const iterator of transactionInUSD) {
-	transactionInRUB.push(iterator*60);
-}
+/*
+Ваша часовая ставка 80$ и вы готовы работать не более 5 часов в день 5 дней в неделю (кроме выходных).
+К вам приходит заказчик и предлагает заказ на 40 часов работы. Сейчас понедельник. Вы должны уехать через 11 дней.
+Выведете в консоль:
+Boolean переменную успеете ли вы взяться за работу
+Сколько вы за неё попросите?
+*/
 
-console.log(transactionInRUB);
+// Данные
 
-// Вариант map
-console.log('Вариант map');
-const transactionInRUB2 = transactionInUSD.map((transaction, i) => {
-	return transaction * 60;
- });
+const payRateUSD = 80; // часовая ставка
+const projectHours = 40; // дней на реализацию проекта
+const availableHours = (11 - 2) * 5; // - осталось часов
 
-console.log(transactionInRUB2);
+//Результат
 
-// Вариант forEach
-console.log('Вариант forEach');
-const transactionInRUB3 = [];
-transactionInUSD.forEach((transaction, i) => {
-	transactionInRUB3[i] = transaction * 60;
- });
-
-console.log(transactionInRUB3);
-
-
-
+console.log('Смогу ли я взятся ? ' +  (availableHours > projectHours));
+console.log('Стоимость работ: ' + projectHours * payRateUSD);
 
 

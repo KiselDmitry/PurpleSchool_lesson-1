@@ -1,4 +1,4 @@
-Изменение комита
+// Изменение комита 2
 
 const transactionInUSD = [10, -7, 50, -10, 100];
 console.log(transactionInUSD);

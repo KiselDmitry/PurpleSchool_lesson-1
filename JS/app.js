@@ -1,3 +1,5 @@
+Изменение комита
+
 const transactionInUSD = [10, -7, 50, -10, 100];
 console.log(transactionInUSD);
 // Вариант for of
